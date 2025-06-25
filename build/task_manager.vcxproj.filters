@@ -9,6 +9,9 @@
     <CustomBuild Include="C:\Users\jfire\Desktop\Modern_CLI\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Natvis Include="C:\Users\jfire\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_json.natvis" />
+  </ItemGroup>
+  <ItemGroup>
     <Filter Include="Source Files">
       <UniqueIdentifier>{AB05AF45-0E80-3F30-B81C-52D02A78368A}</UniqueIdentifier>
     </Filter>
