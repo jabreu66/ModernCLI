@@ -1,0 +1,10 @@
+^C:\USERS\JFIRE\DESKTOP\MODERN_CLI\BUILD\CMAKEFILES\659BD29D9EEA992AF989DEBCCC41F1B3\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/jfire/Desktop/Modern_CLI -BC:/Users/jfire/Desktop/Modern_CLI/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/jfire/Desktop/Modern_CLI/build/TaskManager.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
