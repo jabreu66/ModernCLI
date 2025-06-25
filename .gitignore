@@ -1,0 +1,34 @@
+# --- build artifacts -----------------
+/build/                 # CMake out-of-source build dir
+cmake-build-*/          # CLion default build dirs
+
+# --- CMake files you never want tracked
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# --- Visual Studio / MSVC cruft
+*.obj
+*.pdb
+*.idb
+*.ipch
+*.tlog
+*.lastbuildstate
+*.VC.db
+*.exe
+*.dll
+*.lib
+*.exp
+*.ilk
+/.vs/
+/Debug/
+/Release/
+/x64/
+
+
+.idea/
+.vscode/
+
+.DS_Store
+Thumbs.db
