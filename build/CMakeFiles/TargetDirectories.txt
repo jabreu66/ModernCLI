@@ -1,0 +1,2 @@
+C:/Users/jfire/Desktop/Modern CLI/build/CMakeFiles/edit_cache.dir
+C:/Users/jfire/Desktop/Modern CLI/build/CMakeFiles/rebuild_cache.dir
