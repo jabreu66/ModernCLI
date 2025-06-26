@@ -1,5 +1,6 @@
 set(CMAKE_TOOLCHAIN_FILE "C:/Users/jfire/vcpkg/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
 cmake_minimum_required(VERSION 3.16)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 project(TaskManager LANGUAGES CXX)
  find_package(nlohmann_json CONFIG REQUIRED)
 set(CMAKE_CXX_STANDARD 20)
