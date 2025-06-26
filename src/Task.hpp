@@ -1,17 +1,26 @@
+#ifndef TASK_H
+#define TASK_H
+
 #include <iostream>
 #include <string>
+#include <nlohmann/json.hpp>
 
-using namespace std;
+using json = nlohmann::json;
 
-class Task{
+//using namespace std;
 
-    public:
+struct Task{
 
-
-    private:
-        int ID;
-        string title; // string is part of the string class and uses std::
-        bool completed;
-        string timestamp;
+        int ID = -1;
+        std::string title = ""; // string is part of the string class and uses std::
+        bool completed = false;
+        std::string timestamp = "";
 
 };
+
+void to_json(json &j, const Task &t);
+void from_json(const json &j,  Task &t);
+
+
+
+#endif

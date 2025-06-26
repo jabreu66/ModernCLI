@@ -1,14 +1,24 @@
 #include <iostream>
 #include <string>
+#include <nlohmann/json.hpp>
+#include "Task.hpp"
 
-class Task{
+using json = nlohmann::json;
 
-    public:
+    void to_json(json &j, const Task &t)
+     {
+        j["ID"] = t.ID;
+        j["title"] = t.title;
+        j["completed"] = t.completed;
+        j["timestamp"] = t.timestamp;
+     }
 
+     void from_json(const json &j, Task &t)
+     {
+        t.ID = j.at("ID").get<int>();
+        t.title = j.at("title").get<std::string>();
+        t.completed = j.at("completed").get<bool>();
+        t.timestamp = j.at("timestamp").get<std::string>();
+     }
 
-    private:
-        int ID;
-        string title;
-
-
-};
+  
