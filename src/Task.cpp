@@ -21,4 +21,9 @@ using json = nlohmann::json;
         t.timestamp = j.at("timestamp").get<std::string>();
      }
 
+     void Task::mark_done(Task &t)
+     {
+         t.completed = true;
+     }
+
   

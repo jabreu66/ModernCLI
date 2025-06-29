@@ -20,7 +20,7 @@ struct Task{
 
 void to_json(json &j, const Task &t);
 void from_json(const json &j,  Task &t);
-
+void mark_done(Task &t);
 
 
 #endif
