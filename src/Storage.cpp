@@ -4,6 +4,7 @@
 #include <chrono>
 #include <ctime>
 
+
 Storage::Storage(std::filesystem::path data_file) : file_path(data_file)
 {
     // check if the path exists, if not generate new one
@@ -25,9 +26,10 @@ int Storage::add(std::string title)
 {
     nextID++;
     auto time = std::chrono::system_clock::now();
-    std::string timestamp = std::format("{:%Y-%m-%d %H:%M:%S}", now); 
+    std::string timestamp = std::format("{:%Y-%m-%d %H:%M:%S}", time); 
     Task t = Task(nextID, title, false, timestamp);
     tasks.push_back(t);
+    return nextID;
 }
 
 //Goal of this function should be to read from the tasks vector and write those to the json file, in json format

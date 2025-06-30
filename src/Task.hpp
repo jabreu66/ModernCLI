@@ -16,11 +16,13 @@ struct Task{
         bool completed = false;
         std::string timestamp = "";
 
+        void mark_done(Task &t);
+
+
 };
 
 void to_json(json &j, const Task &t);
 void from_json(const json &j,  Task &t);
-void mark_done(Task &t);
 
 
 #endif

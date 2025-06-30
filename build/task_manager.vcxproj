@@ -387,6 +387,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="C:\Users\jfire\Desktop\Modern_CLI\src\main.cpp" />
     <ClCompile Include="C:\Users\jfire\Desktop\Modern_CLI\src\Task.cpp" />
+    <ClCompile Include="C:\Users\jfire\Desktop\Modern_CLI\src\Storage.cpp" />
     <Natvis Include="C:\Users\jfire\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_json.natvis">
     </Natvis>
   </ItemGroup>

@@ -7,6 +7,9 @@
     <ClCompile Include="C:\Users\jfire\Desktop\Modern_CLI\src\Task.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\jfire\Desktop\Modern_CLI\src\Storage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\jfire\Desktop\Modern_CLI\CMakeLists.txt" />
