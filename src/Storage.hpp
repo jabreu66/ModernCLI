@@ -4,6 +4,8 @@
 #include <filesystem>
 #include <vector>
 #include "Task.hpp"
+#include <nlohmann/json.hpp>
+
 
 class Storage{
     explicit Storage(std::filesystem::path data_file);
@@ -16,7 +18,7 @@ class Storage{
     void load();
 
     private:
-        vector<Task> &tasks;
+        vector<Task> tasks;
         std::filesystem::path file_path;
 };
 
