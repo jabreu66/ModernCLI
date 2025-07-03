@@ -12,18 +12,20 @@
 
 
 class Storage{
-    explicit Storage(std::filesystem::path data_file);
-    ~Storage();
-    const std::vector<Task>& list() const;
-    int add(std::string title);
-    //bool mark_done(int id);
-    bool remove(int id);
-    void save();
-    void load();
 
-    int nextID = -1;
+    public:
+        explicit Storage(std::filesystem::path data_file);
+        ~Storage();
+        const std::vector<Task>& list() const;
+        int add(std::string title);
+        //bool mark_done(int id);
+        bool remove(int id);
+        void save();
+        void load();
+
 
     private:
+        int nextID = -1;
         std::vector<Task> tasks;
         std::filesystem::path file_path;
 };

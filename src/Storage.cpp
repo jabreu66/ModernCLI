@@ -24,6 +24,11 @@ Storage::~Storage()
 }
 
 
+bool Storage::remove(int id)
+{
+    return false;
+}
+
 int Storage::add(std::string title)
 {
     nextID++;
@@ -31,6 +36,7 @@ int Storage::add(std::string title)
     std::string timestamp = std::format("{:%Y-%m-%d %H:%M:%S}", time); 
     Task t = Task(nextID, title, false, timestamp);
     tasks.push_back(t);
+    save();
     return nextID;
 }
 
@@ -50,11 +56,16 @@ void Storage::save()
     json j = tasks;
 
     outputFile << j.dump() << std::endl; 
+
+    std::cout << file_path << std::endl;
+    std::cout << std::filesystem::current_path() << std::endl;
+
+    outputFile.close();
 }
 
 void Storage::load()
 {
-    std::ifstream outputFile("tasks.json", std::ios::app); //ios::app ensures that we don't overwrite the file if it alr exists, only append to it
+    std::ifstream outputFile("tasks.json", std::ios::trunc); //ios::app ensures that we don't overwrite the file if it alr exists, only append to it
 
     if(!outputFile.is_open())
     {
@@ -67,6 +78,8 @@ void Storage::load()
     outputFile >> j;
 
     tasks = j;
+
+    outputFile.close();
 }
 
 
