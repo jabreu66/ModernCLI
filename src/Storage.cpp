@@ -4,6 +4,8 @@
 #include <chrono>
 #include <ctime>
 
+using json = nlohmann::json;
+
 
 Storage::Storage(std::filesystem::path data_file) : file_path(data_file)
 {
@@ -56,9 +58,11 @@ void Storage::load()
 
     if(!outputFile.is_open())
     {
-        std::cerr << "Error opening the file!"
-        return 1;
+        std::cerr << "Error opening the file!";
+        return;
     }
+
+    json j;
 
     outputFile >> j;
 
