@@ -17,7 +17,7 @@ struct Task{
         std::string timestamp = "";
 
         void mark_done(Task &t);
-
+        bool operator==(const Task &other);
 
 };
 

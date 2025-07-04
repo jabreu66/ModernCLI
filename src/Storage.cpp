@@ -3,6 +3,7 @@
 #include <fstream>
 #include <chrono>
 #include <ctime>
+#include <algorithm>
 
 using json = nlohmann::json;
 
@@ -26,7 +27,25 @@ Storage::~Storage()
 
 bool Storage::remove(int id)
 {
+    if(tasks.empty())
+    {
+        std::cout << "There are no tasks to remove." << std::endl;
+        return false;
+    }
+
+    for(Task t : tasks)
+    {
+        std::cout << t.ID << std::endl;
+        int t_id = t.ID;
+        if((int)t_id == (int)id)
+        {
+            tasks.erase(std::remove(tasks.begin(), tasks.end(), t));
+            return true;
+        }
+    }
+
     return false;
+    //return false;
 }
 
 int Storage::add(std::string title)

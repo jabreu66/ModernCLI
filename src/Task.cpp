@@ -26,4 +26,9 @@ using json = nlohmann::json;
          t.completed = true;
      }
 
+     bool Task::operator==(const Task &other)
+     {
+         return(this->ID == other.ID);
+     }
+
   

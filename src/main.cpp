@@ -19,5 +19,7 @@ int main()
     s.add("Homework");
     s.add("Gym");
     s.add("Sleep");
+    s.remove(1);
+    s.add("Work");
     return 0;
 }
