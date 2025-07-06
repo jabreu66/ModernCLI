@@ -29,13 +29,13 @@ bool Storage::remove(int id)
 {
     if(tasks.empty())
     {
-        std::cout << "There are no tasks to remove." << std::endl;
+        // std::cout << "There are no tasks to remove." << std::endl;
         return false;
     }
 
     for(Task t : tasks)
     {
-        std::cout << t.ID << std::endl;
+        // std::cout << t.ID << std::endl;
         int t_id = t.ID;
         if((int)t_id == (int)id)
         {
@@ -67,7 +67,7 @@ void Storage::save()
 
     if(!outputFile.is_open())
     {
-        std::cerr << "Error opening the file!";
+        std::cerr << "Error opening the file!" << std::endl;
         return;
     }
 
@@ -76,8 +76,8 @@ void Storage::save()
 
     outputFile << j.dump() << std::endl; 
 
-    std::cout << file_path << std::endl;
-    std::cout << std::filesystem::current_path() << std::endl;
+    // std::cout << file_path << std::endl;
+    // std::cout << std::filesystem::current_path() << std::endl;
 
     outputFile.close();
 }
@@ -88,7 +88,7 @@ void Storage::load()
 
     if(!outputFile.is_open())
     {
-        std::cerr << "Error opening the file!";
+        std::cerr << "Error opening the file!" << std::endl;
         return;
     }
 
