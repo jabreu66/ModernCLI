@@ -84,9 +84,9 @@ void Storage::save()
 
 void Storage::load()
 {
-    std::ifstream outputFile("tasks.json", std::ios::trunc); //ios::app ensures that we don't overwrite the file if it alr exists, only append to it
+    std::ifstream inputFile(file_path, std::ios::in); //ios::app ensures that we don't overwrite the file if it alr exists, only append to it
 
-    if(!outputFile.is_open())
+    if(!inputFile.is_open())
     {
         std::cerr << "Error opening the file!" << std::endl;
         return;
@@ -94,11 +94,16 @@ void Storage::load()
 
     json j;
 
-    outputFile >> j;
+    inputFile >> j;
 
     tasks = j;
 
-    outputFile.close();
+    inputFile.close();
 }
+
+ std::vector<Task> Storage::getTasks()
+ {
+    return this->tasks;
+ }
 
 

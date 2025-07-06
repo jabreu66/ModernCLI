@@ -23,6 +23,8 @@ class Storage{
         void save();
         void load();
 
+        std::vector<Task> getTasks();
+
 
     private:
         int nextID = -1;

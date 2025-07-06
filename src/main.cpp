@@ -13,7 +13,7 @@ using json = nlohmann::json;
 int main()
 {
     cout << "Task Manager running..." << endl;
-    cout << "Hello! Welcome to the Task CLI. Your available commands are: add and remove. Please specify one of these commands followed by the name of your task." << endl;
+    cout << "Hello! Welcome to the Task CLI. Your available commands are: add, remove, save, load, and see. Please specify one of these commands followed by the name of your task." << endl;
     cout << "If you wish to exit the program, type exit" << endl;
 
     bool run = true;
@@ -40,6 +40,23 @@ int main()
             int ID = stoi(task);
             bool removed = s.remove(ID);
             (removed) ? cout << "Removing task with ID of " << ID << endl : cout << "ID doesn't exist" << endl;
+        }
+         else if(operation == "see")
+        {
+            vector<Task> tsks = s.getTasks();
+            if(tsks.empty())
+            {
+                cout << "There are no tasks to see" << endl;
+            }
+            else
+            {
+                for(Task &t : tsks)
+                {
+                    cout << t.title << " has ID, " << t.ID << " ";
+                }
+
+                cout << endl;
+            }
         }
         else if(operation == "exit")
         {
