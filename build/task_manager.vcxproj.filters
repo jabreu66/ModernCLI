@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\jfire\Desktop\Modern_CLI\src\main.cpp">
+    <ClCompile Include="C:\Users\jfire\OneDrive\Desktop\ModernCLI\ModernCLI\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\jfire\Desktop\Modern_CLI\src\Task.cpp">
+    <ClCompile Include="C:\Users\jfire\OneDrive\Desktop\ModernCLI\ModernCLI\src\Task.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\jfire\Desktop\Modern_CLI\src\Storage.cpp">
+    <ClCompile Include="C:\Users\jfire\OneDrive\Desktop\ModernCLI\ModernCLI\src\Storage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\jfire\Desktop\Modern_CLI\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\jfire\OneDrive\Desktop\ModernCLI\ModernCLI\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Natvis Include="C:\Users\jfire\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_json.natvis" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{AB05AF45-0E80-3F30-B81C-52D02A78368A}</UniqueIdentifier>
+      <UniqueIdentifier>{52D18F64-46E9-329D-AFD1-FBEC7F60035B}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
