@@ -52,7 +52,7 @@ int main()
             {
                 for(Task &t : tsks)
                 {
-                    cout << t.title << " has ID, " << t.ID << " ";
+                    cout << t.title << " has ID " << t.ID << ", ";
                 }
 
                 cout << endl;
