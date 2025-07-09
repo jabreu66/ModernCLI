@@ -1,3 +1,3 @@
-C:/Users/jfire/Desktop/Modern_CLI/build/CMakeFiles/task_manager.dir
-C:/Users/jfire/Desktop/Modern_CLI/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/jfire/Desktop/Modern_CLI/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/jfire/OneDrive/Desktop/ModernCLI/ModernCLI/build/CMakeFiles/task_manager.dir
+C:/Users/jfire/OneDrive/Desktop/ModernCLI/ModernCLI/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/jfire/OneDrive/Desktop/ModernCLI/ModernCLI/build/CMakeFiles/ZERO_CHECK.dir

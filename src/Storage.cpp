@@ -84,7 +84,7 @@ void Storage::save()
 
 void Storage::load()
 {
-    std::ifstream inputFile(file_path, std::ios::in); //ios::app ensures that we don't overwrite the file if it alr exists, only append to it
+    std::ifstream inputFile(file_path, std::ios::in);
 
     if(!inputFile.is_open())
     {

@@ -4,9 +4,11 @@
 #include <nlohmann/json.hpp>
 #include<string>
 #include <sstream>
+#include <filesystem>
 
 using namespace std;
 
+namespace fs = std::filesystem;
 using json = nlohmann::json;
 
 
@@ -17,7 +19,8 @@ int main()
     cout << "If you wish to exit the program, type exit" << endl;
 
     bool run = true;
-    Storage s("C:/Users/jfire/Desktop/Modern_CLI/tasks.json");
+    fs::path tasksFile = fs::current_path() / "tasks.json";
+    Storage s(tasksFile.string());
 
     while(run)
     {

@@ -1,7 +1,7 @@
 # --- build artifacts -----------------
 /build/                 # CMake out-of-source build dir
 cmake-build-*/          # CLion default build dirs
-
+/build-new/
 # --- CMake files you never want tracked
 CMakeCache.txt
 CMakeFiles/
